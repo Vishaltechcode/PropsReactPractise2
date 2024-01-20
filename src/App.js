@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import ParentComponent from './ParentComponent';
+import ThemeContext from './ThemeContext';
+import Page from './page';
 
 function App() {
+  
+  let color="red";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>experiments of context api - 1</h1>
+      <ParentComponent mycolor={color}/>
+ 
+      {/*  <ThemeContext.Provider>
+
+
+      <ThemeContext.Provider/> */}
+      <Page/>
     </div>
   );
 }
